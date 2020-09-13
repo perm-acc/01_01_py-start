@@ -1,14 +1,14 @@
-def my_f(d1 = input('Делимое: '), d2 = input('Делитель: ')):
+def my_f(d_1, d_2):
     try:
-        int(d1)
+        int(d_1)
     except ValueError as err:
         print ('У делимого нецифровое значение')
     try:
-        int(d2)
+        int(d_2)
     except ValueError as err:
         print ('У делителя нецифровое значение')
     try:
-        d = int(d1) / int(d2)
+        d = int(d_1) / int(d_2)
     except (ZeroDivisionError,  ValueError) as err:
         print ('Нельзя делить на 0 или нецифровые значения')
     try:
@@ -16,4 +16,4 @@ def my_f(d1 = input('Делимое: '), d2 = input('Делитель: ')):
     except (UnboundLocalError) as err:
         print ('Результат не определен')
     return
-my_f()
+my_f(input('Делимое: '), input('Делитель: '))
